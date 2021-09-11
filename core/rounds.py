@@ -4,7 +4,6 @@ from core.sboxes import calculatingSboxOutput
 
 
 def roundsForAlgorithm(L, R, Km, Kr, numberOfRounds, encryptionOrDecryption):
-    print('Km ', Km, ' Kr ', Kr, ' R ', R)
     I = [None] * numberOfRounds
     f = [None] * numberOfRounds
     if encryptionOrDecryption:
@@ -13,7 +12,6 @@ def roundsForAlgorithm(L, R, Km, Kr, numberOfRounds, encryptionOrDecryption):
             # 1, 4, 7, 10, 13, and 16
             if i == 0 or i == 3 or i == 6 or i == 9 or i == 12 or i == 15:
                 sumBitArray = additionModulo2exp32(Km[i], R[i])
-                print("module result BA", sumBitArray)
                 I[i] = circularLeftRotation(sumBitArray, Kr[i])
                 I1 = divideITo4Parts(I[i])
                 f[i] = function1(I1)
@@ -35,11 +33,9 @@ def roundsForAlgorithm(L, R, Km, Kr, numberOfRounds, encryptionOrDecryption):
     else:
         for i in range(numberOfRounds-1, -1, -1):
             I1 = [None] * 4
-            print("number of rounds", i)
             # 1, 4, 7, 10, 13, and 16
             if i == 0 or i == 3 or i == 6 or i == 9 or i == 12 or i == 15:
                 sumBitArray = additionModulo2exp32(Km[i], R[i+1])
-                print("module result BA", sumBitArray)
                 I[i] = circularLeftRotation(sumBitArray, Kr[i])
                 I1 = divideITo4Parts(I[i])
                 f[i] = function1(I1)

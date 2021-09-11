@@ -26,7 +26,6 @@ class EncryptionOrDecryptionDialog(QDialog):
         self.setLayout(layout)
 
     def openStartSimulationPage(self):
-        #self.hide()
         if self.encryptionRB.isChecked() == True:
             startEncryption = StartEncryptionDialog(self)
             startEncryption.setFixedSize(QSize(600, 250))

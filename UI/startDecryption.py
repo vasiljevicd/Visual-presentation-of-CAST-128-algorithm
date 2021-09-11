@@ -1,4 +1,3 @@
-from PyQt5.QtCore import QSize
 from PyQt5.QtWidgets import *
 
 from UI.algorithm import AlgorithmDialog

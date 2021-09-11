@@ -1,10 +1,5 @@
 from PyQt5.QtGui import QFont
 from PyQt5.QtWidgets import *
-
-
-# Main Window
-from PyQt5.uic.properties import QtGui
-from bitarray._util import ba2base
 from bitarray.util import ba2int
 
 

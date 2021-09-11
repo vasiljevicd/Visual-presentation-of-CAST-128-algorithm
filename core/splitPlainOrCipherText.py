@@ -1,7 +1,5 @@
 from bitarray import bitarray
 
-from UI.errorDialog import ErrorDialog
-
 
 def splitPlainOrCipherText(plaintext):
     binaryPlainText = plainOrCipherTextHexToBinary(plaintext)

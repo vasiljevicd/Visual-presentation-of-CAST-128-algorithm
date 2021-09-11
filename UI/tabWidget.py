@@ -1,10 +1,6 @@
-import PyQt5
-from PyQt5 import QtCore
 from PyQt5.QtCore import Qt
-from PyQt5.QtCore import QPropertyAnimation, QSize, QPoint, QSequentialAnimationGroup
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtWidgets import *
-from PyQt5.QtCore import pyqtSlot
 from bitarray._util import *
 
 from UI.sBoxWidget import SboxWidget

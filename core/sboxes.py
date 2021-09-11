@@ -290,9 +290,7 @@ def calculatingSboxOutput(sboxNumber, inputValue):
     row = ba2int(inputValue[0:5])
     column = ba2int(inputValue[5:8])
     hexValue = sbox[row][column]
-    #print(hexValue)
     int_value = (int(hexValue, 16))
     stringSBoxOutput = (bin(int_value)[2:]).zfill(32)
     binarySboxOutput = bitarray(stringSBoxOutput)
-    #print(stringSBoxOutput)
     return binarySboxOutput
